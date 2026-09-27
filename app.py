@@ -12,6 +12,9 @@ CONFIG = BASE / "stock_screener_v3_config.json"
 
 app = Flask(__name__)
 CFG = load_config(str(CONFIG) if CONFIG.exists() else None)
+# Vercel deployments have an ephemeral/read-only application filesystem; use /tmp for the optional cache.
+CFG.setdefault("cache", {})["enabled"] = False
+CFG.setdefault("cache", {})["dir"] = "/tmp/stock_screener_cache"
 LOG = setup_log(False, False, None)
 
 METRIC_ROWS = {
