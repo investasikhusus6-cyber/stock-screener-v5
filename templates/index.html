@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stock Screener Pro V5.1</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="top">
+  <div>
+    <div class="eyebrow">FUNDAMENTAL ANALYSIS</div>
+    <h1>Stock Screener <span>V5</span></h1>
+    <p>Analisis otomatis 5 tahun + data terbaru</p>
+  </div>
+  <button id="themeBtn" class="ghost">☼ / ☾</button>
+</header>
+
+<main>
+<section class="search card">
+  <div class="searchrow">
+    <input id="ticker" value="BBCA" placeholder="Masukkan kode saham, contoh BBCA atau BBCA,BBRI,TLKM">
+    <button id="analyzeBtn">Analisis</button>
+  </div>
+  <div class="chips">
+    <button data-ticker="BBCA">BBCA</button><button data-ticker="BBRI">BBRI</button>
+    <button data-ticker="BMRI">BMRI</button><button data-ticker="TLKM">TLKM</button>
+    <button data-ticker="ASII">ASII</button><button data-ticker="UNVR">UNVR</button>
+  </div>
+</section>
+
+<div id="status"></div>
+<div id="results"></div>
+</main>
+
+<footer>
+  Stock Screener V5.1 • Data dari Yahoo Finance melalui yfinance • FY = fiscal year, TTM = trailing twelve months.
+  Hasil screening bukan nasihat investasi. Verifikasi laporan resmi emiten/BEI.
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
