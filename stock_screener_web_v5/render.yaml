@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: stock-screener-pro-v5
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
